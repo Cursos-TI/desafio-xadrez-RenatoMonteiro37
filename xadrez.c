@@ -1,32 +1,59 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
 
-int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+ int main(){
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+        // --- BLOCO DE MOVIMENTAÇÃO DA TORRE USANDO ESTRUTURA FOR ---
 
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+        int TORRE; 
+        char letratorre[] = "A";
 
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
+        printf("VAMOS MOVIMENTAR A TORRE 5 CASAS PARA DIREITA\n");
 
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
+        for (TORRE = 1; TORRE <=5; TORRE++){
+            printf("TORRE NA CASA: %s%d\n", letratorre, TORRE);
+            
+        } 
+        printf("\nTORRE PAROU NA CASA: %s%d\n", letratorre, TORRE);
 
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
 
-    return 0;
-}
+        // --- BLOCO DE MOVIMENTAÇÃO DO BISPO USANDO ESTRUTURA WHILE ---
+
+
+        printf("\nVAMOS MOVIMENTAR O BISPO 5 CASAS NA DIAGONAL PARA CIMA E PARA DIREITA\n");
+
+         int BISPO = 2;
+         char letrabispo[] = "B";
+
+        while (BISPO <= 7 && letrabispo[0] != 'G'){
+            printf("BISPO NA CASA: %s%d\n", letrabispo, BISPO);
+            BISPO++;
+            letrabispo[0]++;
+        }
+
+             printf("\nBISPO PAROU NA CASA: %s%d\n", letrabispo, BISPO);
+
+
+
+        // --- BLOCO DE MOVIMENTAÇÃO DA RAINHA USANDO ESTRUTURA DO WHILE ---
+
+
+        printf("\nVAMOS MOVIMENTAR A RAINHA 8 CASAS PARA ESQUERDA\n");
+
+
+         int RAINHA = 2;
+         char letrarainha[3] = "I";
+
+        do {
+            printf("RAINHA NA CASA: %s%d\n", letrarainha, RAINHA);
+            letrarainha[0]--;
+            
+        }  while (letrarainha[0] != 'A');
+           
+        printf("RAINHA PAROU NA CASA: %s%d\n", letrarainha, RAINHA);
+        
+        
+        return 0;
+    }
+    
